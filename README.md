@@ -3,6 +3,8 @@ This is a Tic-Tac-Toe game where the user can decide to play with a friend or a 
 The User must choose a designated symbol and who their desired opponent will be. (COMPUTER or PLAYER)
 
 I currently have 2 app.js files.
+The main app.js that functions the game is 
+app.js NOT app-main.js
 
 ## DISCLAIMER
 
