@@ -1,0 +1,204 @@
+.hide {
+    display: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+/* ======== Options Area =============== */
+.container{
+    background-color: #BBC7F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #fec8df;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    border-radius: 10%;
+    box-shadow: .4px 10px #888888;
+}
+
+.title-area {
+    color: #888888;
+}
+
+hr {
+    width: 50%;
+    color: rgba(247, 89, 89, 0.836);
+    margin: .2rem 0;
+}
+
+.options h3 {
+    margin-top: .3rem;
+    margin-bottom: .5rem;
+}
+
+.op-btn {
+    padding: .5rem 1.5rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fec8df;
+    font-size: 1.5rem;
+    background-color: #888888;
+    box-shadow: .4px 4px rgb(247, 89, 89);
+}
+
+.x-player {
+    margin-right: .2rem; 
+}
+
+.o-player {
+    margin-left: .2rem;
+}
+
+.op-btn:hover {
+    background-color: rgb(247, 89, 89);
+    box-shadow: .4px 4px #888888;
+}
+
+.play-now {
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background-color: rgb(247, 89, 89);
+    border: none;
+    color: #fec8df;
+    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    box-shadow: .4px 4px #888888;
+    border-radius: 0.5rem;
+}
+
+.play-now:hover {
+    background-color: #888888;
+    box-shadow: .4px 4px  rgb(247, 89, 89);
+}
+
+/* ======== Game Area Container =============== */
+.game-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* ======== Display players turn =============== */
+.display-player {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #414141;
+    cursor: default;
+}
+
+.display-turn {
+    color: #fc6eab;
+    text-shadow: 1px 2px #fec8df;
+}
+
+.divide { 
+    width: 100%
+}
+
+/* ======== Game Board Area =============== */
+.game-board {
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 5px;
+   
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #fec8df;
+    gap: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: .4px 2px #888888;
+}
+
+.tile:hover {
+    background-color: #ce065d79;
+    transition: all .5s ease;
+}
+
+/* ======== Hype text (below tiles) =============== */
+.hype {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.hype p {
+    margin-top: .6rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #414141;
+}
+
+/* ======== RESULT AREA =============== */
+.result-page {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+    color:#BBC7F5;
+    cursor: default;
+    text-shadow: 1px 2px rgba(247, 89, 89, 0.836);
+}
+
+.result-page button {
+font-size: 2rem;
+border:none;
+border-radius: 0.5rem;
+cursor: pointer;
+padding: .5rem;
+background-color: rgba(247, 89, 89, 0.836);
+box-shadow: .4px 4px #BBC7F5;
+color: #BBC7F5;
+font-family: 'Nunito', sans-serif;
+font-weight: 600;
+}
+
+
+.result-page button:hover {
+    background-color: #BBC7F5;
+    color:rgba(247, 89, 89, 0.836);
+    box-shadow:.4px 4px rgba(247, 89, 89, 0.836);
+}
+
+
+.show {
+    display: flex;
+}

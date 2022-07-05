@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe Redo</title>
+</head>
+<body>
+    <div class="container">
+            <div class="options">
+                <h1>Tic-Tac-Toe</h1>
+                    <hr class="divide">
+                    <h2 class="symbol">Symbol</h2>
+                    <div class="sign">
+                        <button class="x">X</button>
+                        <button class="o">O</button>
+                    </div>
+                    <h2>Choose Opponent</h2>
+                <div class="opponents">
+                    <button class="computer">COMPUTER</button>
+                    <button class="player">PLAYER</button>
+                </div>
+            <div class="play">
+                <button class="play-btn">PLAY</button>
+            </div>
+        </div>
+        <section class="game-area hide">
+            <div class="display-player">
+                <span class="display-turn"></span>
+                <hr class="divide">
+            </div>
+            <section class="game-board">
+                <div data-index="1" class="tile"></div>
+                <div data-index="2" class="tile"></div>
+                <div data-index="3" class="tile"></div>
+                <div data-index="4" class="tile"></div>
+                <div data-index="5" class="tile"></div>
+                <div data-index="6" class="tile"></div>
+                <div data-index="7" class="tile"></div>
+                <div data-index="8" class="tile"></div>
+                <div data-index="9" class="tile"></div>
+            </section>
+            <div class="hype">
+                <hr class="divide">
+                <p>Good luck, have fun!</p>
+            </div>
+        </section>
+        <div class="result-page hide">
+            <h2 id="win-text"></h2>
+            <button class="restart">RESTART</button>
+        </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+</body>
+</html>

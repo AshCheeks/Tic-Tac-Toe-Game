@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe Redo</title>
+</head>
+<body>
+    <div class="container">
+        <header class="title-area hide">
+            <h1>Tic Tac Toe</h1>
+            <hr>
+            <div class="options">
+                <h3>Choose Your Symbol</h3>
+                <button class=" x-player op-btn"><i class="fa-solid fa-x"></i></button>
+                <button class="o-player op-btn"><i class="fa-solid fa-o"></i></button>
+            </div>
+            <button class="play-now">PLAY</button>
+        </header>
+        <section class="game-area">
+            <div class="display-player">
+                Player <span class="display-turn player"><i class="fa-solid fa-x"></i></span> 's turn
+                <hr class="divide">
+            </div>
+            <section class="game-board">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </section>
+            <div class="hype">
+                <hr class="divide">
+                <p>Good luck, have fun!</p>
+            </div>
+        </section>
+        <div class="result-page hide">
+            <h2 id="win-text">X WINS!</h2>
+            <button class="restart">RESTART</button>
+        </div>
+    </div>
+</body>
+</html>

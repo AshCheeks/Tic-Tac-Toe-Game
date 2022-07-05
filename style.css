@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    background-color: #BBC7F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ======== Options Area =============== */
+.options {
+    background-color: #fec8df;
+    min-width: 25rem;
+    min-height: 25rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+    color: #414141;
+    text-shadow: 1px 2px #fc6eab;
+}
+
+hr {
+    width: 50%;
+    color: #fc6eab;
+    text-shadow: 1px 2px #f0096d;
+}
+
+.options.hide {
+    display: none;
+}
+
+.options h2 {
+    margin-top: 1rem;
+}
+
+
+.computer, .player {
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size:1rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    background-color: #8f9ed8;
+    color: #fec8df;
+    cursor: pointer;
+}
+
+.computer {
+    width: 7rem;
+    height: 3rem;
+    /* padding: .5rem 2rem; */
+    margin-right: .2rem;
+}
+
+.player {
+    width: 7rem;
+    height: 3rem;
+    /* padding: .5rem 2.901rem; */
+    margin-left: .2rem;
+}
+
+.x , .o {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+    background-color: #8f9ed8;
+    color: #fec8df;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.x {
+    margin-right: .2rem;
+}
+
+.o {
+    margin-left: .2rem;
+}
+
+.play {
+    margin-top: 2rem;
+}
+
+.play-btn {
+    background-color: #8f9ed8;
+    color: #fec8df;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.computer#error, .player#error, .x#error,.o#error {
+    background-color: #f13f48;
+}
+
+.computer#active, .player#active,.x#active,.o#active {
+    background-color: #445dc4;
+    transition: all .3s ease-in;
+}
+
+.computer:hover, 
+.player:hover, 
+.x:hover, 
+.o:hover, 
+.play-btn:hover {
+background-color: #ff7f94;
+box-shadow: .2px 4px #8f9ed8;
+transition: all .2s ease;
+}
+
+
+/* ======== Game Area Container =============== */
+.game-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game-area.hide {
+    display: none;
+}
+
+/* ======== Display players turn =============== */
+.display-player {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #414141;
+    cursor: default;
+}
+
+.display-turn > .fa-x {
+    color: #ff7db3;
+    text-shadow: 1px 2px #fec8df;
+}
+
+.display-turn > .fa-o {
+    color: #af8cff;
+    text-shadow: 1px 2px #fec8df;
+}
+
+.divide { 
+    width: 100%
+}
+
+/* ======== Game Board Area =============== */
+.game-board {
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 5px;
+   
+}
+
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #fec8df;
+    gap: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: .4px 2px #888888;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2.8rem;
+}
+
+.tile:hover {
+    background-color: #ce065d79;
+    transition: all .5s ease;
+}
+
+.fa-x {
+    color: #ff7db3;
+    text-shadow: .5px 1.5px #be658c;
+}
+.fa-o {
+    color: #af8cff;
+    text-shadow: .5px 1.5px #be658c;
+}
+
+/* ======== Hype text (below tiles) =============== */
+.hype {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.hype p {
+    margin-top: .6rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #414141;
+}
+
+
+
+/* ======== RESULT AREA =============== */
+.result-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+    color:#BBC7F5;
+    cursor: default;
+    text-shadow: 1px 2px rgba(247, 89, 89, 0.836);
+}
+
+.result-page button {
+font-size: 2rem;
+border:none;
+border-radius: 0.5rem;
+cursor: pointer;
+padding: .5rem;
+background-color: rgba(247, 89, 89, 0.836);
+box-shadow: .4px 4px #BBC7F5;
+color: #BBC7F5;
+font-family: 'Nunito', sans-serif;
+font-weight: 600;
+}
+
+
+.result-page button:hover {
+    background-color: #BBC7F5;
+    color:rgba(247, 89, 89, 0.836);
+    box-shadow:.4px 4px rgba(247, 89, 89, 0.836);
+}
+
+.result-page.hide {
+   display: none;
+}
+
+.result-page.show {
+    display: flex;
+}
